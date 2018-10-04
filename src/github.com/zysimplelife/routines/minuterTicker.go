@@ -20,7 +20,7 @@ func MinuteTicker() *time.Ticker {
 	return t
 }
 
-func main()
+func main() {
 	for n := range MinuteTicker().C {
 		fmt.Println("NOW: ", n)
 	}
