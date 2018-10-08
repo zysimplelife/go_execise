@@ -12,8 +12,6 @@ import (
 	"github.com/fsnotify/fsnotify"
 )
 
-type reload func()
-
 func main() {
 	log.SetFlags(log.Lshortfile)
 	log.Println("Server is starting")
