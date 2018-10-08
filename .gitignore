@@ -1,0 +1,22 @@
+# BUILD_DIR
+build/
+bin/
+
+#intellj ide
+.idea
+*.iml
+
+#test temp files
+vastest.iml
+
+# buildenv
+.kube
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+#vi
+*.swp
+
