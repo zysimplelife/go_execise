@@ -11,7 +11,7 @@ func main() {
 	log.Println("Server is starting")
 
 	// start ticker to update certifcate
-	ticker := time.NewTicker(5 * time.Second)
+	ticker := time.NewTicker(30 * time.Second)
 	go func() {
 		for t := range ticker.C {
 			fmt.Println("Tick at", t)
@@ -31,6 +31,7 @@ func main() {
 		key:  "./server.key",
 	}
 	watcher.watch()
+	generateSelfSignCert()
 	for {
 		select {
 		case <-watcher.needReload:
