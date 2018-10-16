@@ -20,3 +20,7 @@ vastest.iml
 #vi
 *.swp
 
+#go
+vendor/
+Gopkg.lock
+Gopkg.toml
