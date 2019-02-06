@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zysimplelife/stringutil"
+	"github.com/zysimplelife/go_execise/pkg/stringutil"
 	"math"
 	"math/rand"
 )
@@ -79,4 +79,5 @@ func pow(x, n, lim float64) float64 {
 		fmt.Printf("%g >= %g\n", v, lim)
 	}
 	return lim
+
 }

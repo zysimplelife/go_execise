@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"time"
@@ -20,7 +21,7 @@ func main() {
 	}()
 
 	//server
-	server := ReloadableListener{
+	server := ReloadableListenerV2{
 		cert: "./server.crt",
 		key:  "./server.key",
 	}
@@ -32,10 +33,14 @@ func main() {
 	}
 	watcher.watch()
 	generateSelfSignCert()
+	ctx, cancel := context.WithCancel(context.Background())
+	server.serve(ctx)
 	for {
 		select {
 		case <-watcher.needReload:
-			server.restart()
+			cancel()
+			<-server.done
+			server.serve(ctx)
 		}
 	}
 
