@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"sync"
 )
@@ -62,12 +61,12 @@ func merge(done <-chan struct{}, cs ...<-chan int) <-chan int {
 
 func main() {
 
-	in := gen(2, 3, 4, 6)
-	c1 := sq(in, "c1")
-	c2 := sq(in, "c2")
+	//	in := gen(2, 3, 4, 6)
+	//c1 := sq(in, "c1")
+	//c2 := sq(in, "c2")
 
-	for n := range merge(c1, c2) {
-		fmt.Println(n)
-	}
+	//for n := range merge(c1, c2) {
+	//fmt.Println(n)
+	//}
 
 }

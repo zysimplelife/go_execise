@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/zysimplelife/go_execise/pkg/stringutil"
+	"go_exercise/pkg/stringutil"
 	"math"
 	"math/rand"
 )

@@ -12,7 +12,7 @@ func worker(id int, jobs <-chan int, results chan<- int) {
 	}
 }
 
-func main() {
+func testmain() {
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
 

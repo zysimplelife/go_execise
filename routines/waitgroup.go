@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func main() {
+func testmain2() {
 	var wait sync.WaitGroup
 	wait.Add(5)
 	for i := 0; i < 5; i++ {
