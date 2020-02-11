@@ -21,8 +21,10 @@ func main() {
 	// - For your broker, set `unclean.leader.election.enable` to false
 	// - For the topic, you could increase `min.insync.replicas`.
 
-	broker1 := "localhost:39093"
-	producer, err := sarama.NewSyncProducer([]string{broker1}, config)
+	brokers := []string{"lenard002.seli.gic.ericsson.se:39094",
+		"lenard002.seli.gic.ericsson.se:39095",
+		"lenard002.seli.gic.ericsson.se:39096"}
+	producer, err := sarama.NewSyncProducer(brokers, config)
 	if err != nil {
 		log.Fatalln("Failed to start Sarama producer:", err)
 	}
