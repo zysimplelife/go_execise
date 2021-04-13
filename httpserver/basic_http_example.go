@@ -12,6 +12,10 @@ type helloWorldResponse struct {
 }
 
 func main() {
+	//Profile
+	go func() {
+		log.Println(http.ListenAndServe("localhost:6060", nil))
+	}()
 	port := 8081
 	http.HandleFunc("/helloworld", helloWorldHandler)
 	log.Printf("Server starting on port %v\n", port)

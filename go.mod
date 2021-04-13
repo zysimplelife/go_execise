@@ -1,5 +1,7 @@
 module go_exercise
 
+go 1.15
+
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/DataDog/zstd v1.3.5 // indirect
@@ -12,6 +14,7 @@ require (
 	github.com/fsnotify/fsnotify v1.4.7
 	github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db // indirect
 	github.com/gorilla/mux v1.7.0 // indirect
+	github.com/hashicorp/go-retryablehttp v0.6.8
 	github.com/pierrec/lz4 v0.0.0-20190131084431-473cd7ce01a1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a // indirect
